@@ -1,0 +1,49 @@
+body {
+
+    background-color: #f6d198;
+}
+
+
+.home-background {
+    background-image: url(Images/back2.png);
+    height: 700px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-color: #f6d198;
+}
+
+.container1{
+    height: 150px;
+    background-color: rgb(73, 133, 202);
+}
+
+.container2{
+    height: 850px;
+    background-color: rgb(73, 133, 202);
+}
+
+.main{
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+
+@keyframes cf3FadeInOut {
+    0% {
+    opacity:1;
+    }
+    45% {
+    opacity:1;
+    }
+    55% {
+    opacity:0;
+    }
+    100% {
+    opacity:0;
+    }
+}
+  
+  
