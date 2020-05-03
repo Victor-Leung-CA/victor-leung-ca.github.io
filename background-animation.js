@@ -6,7 +6,7 @@ $win.on('scroll',function() {
     var st = $(this).scrollTop();
     var top= ($win.scrollTop());
     var width= $win.width();
-    var percent= top*width*0.002;
+    var percent= top*width*0.0012;
 
     if (st > lastScrollTop){
         $plane.css('transform', 'translateX(' +percent+ 'px) scaleX(1)');
