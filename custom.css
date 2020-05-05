@@ -1,28 +1,46 @@
 body {
-
+    max-width: 100%;
     background-color: #f6d198;
 }
 
-
 .home-background {
-    background-image: url(Images/back2.png);
-    height: 700px; /* You must set a specified height */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    background-image: url(Images/back2.png), url(Images/pngguru.com.png);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
     background-color: #f6d198;
+    height: 100vh;
+    width: 100vw;
+    overflow: visible;
+    margin:auto;
+    max-width: 100%;
+}
+
+.planecontainer{
+    height: 8vw;
+    min-height: vw;
+    background-color: rgb(229, 247, 252);
+    max-width:100%;
 }
 
 .container1{
-    height: 150px;
-    background-color: rgb(73, 133, 202);
+    background-color: rgb(229, 247, 252);
+    max-width:100%;
+    height: 800px;
 }
 
 .container2{
-    height: 850px;
+    min-height: 2000px;
     background-color: rgb(73, 133, 202);
+    position: static;
 }
 
+.fullpagecontainer{
+
+    height: 100vh;
+    width: 100vw;
+    background-color:white;
+}
 .main{
     animation-name: cf3FadeInOut;
     animation-timing-function: ease-in-out;
