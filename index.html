@@ -9,45 +9,47 @@
     <link href="custom.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    <link rel="shortcut icon" type="image/png" href="Images/Logo.png">
     <title>Victor Leung</title>
 </head>
 
+<body data-spy="scroll" data-target=".navbar" data-offset="40">
     <div class="home-background">
-        <nav class="navbar navbar-expand-md navbar-light" style="background: rgba(0,0,0,0)">
+        <nav id="navbar" class="navbar navbar-expand-md navbar-light" style="background: rgba(0,0,0,0)">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse justify-content-center" id="navbarMenu">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="index.html" style= "padding-right: 7em; font-size: larger; font-family: 'Open Sans'; font-weight:300">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="projects.html" style= "padding-right: 7em; font-size: larger; font-family: 'Open Sans', sans-serif; font-weight:300;">Projects</a>
-                    <a class="nav-item nav-link" href="#" style= "padding-right: 7em; font-size: larger; font-family: 'Open Sans', sans-serif; font-weight: 300;">Resume</a>
-                    <a class="nav-item nav-link" href="#" style= "font-size: larger; font-family: 'Open Sans', sans-serif; font-weight: 300;">Photography</a>
+                    <a class="nav-item nav-link navEdit active" href="#about" style= "padding-right: 7em; font-size: larger; font-family: 'Open Sans'; font-weight:300">About<span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link active" href="#resume" style= "padding-right: 7em; font-size: larger; font-family: 'Open Sans', sans-serif; font-weight:300;">Resume</a>
+                    <a class="nav-item nav-link active" href="#projects" style= "padding-right: 7em; font-size: larger; font-family: 'Open Sans', sans-serif; font-weight: 300;">Projects</a>
+                    <a class="nav-item nav-link active" href="#" style= "font-size: larger; font-family: 'Open Sans', sans-serif; font-weight: 300;">Photography</a>
                 </div>
             </div>
         </nav>
-    
-        <h1 class="display-4 text-center" style= "padding-top:0.5em; font-family: 'Open Sans'; font-weight:400">VICTOR LEUNG</h1>
-        <h3 class="text-center" style= "padding-top:0.1em; font-family: 'Open Sans'; font-weight:100">Integrated Engineering</h3>
-        <h6 class="text-center" style= "padding-top:0.1em; font-family: 'Open Sans'; font-weight:100">Mechanical + Electrical + Aerospace</h6>
+        
+        <h1 class="display-4 text-center" style= "font-size: calc(1.5vw + 3vh);padding-top:2vh; font-family: 'Open Sans'; font-weight:400">VICTOR LEUNG</h1>
+        <h3 class="text-center" style= "font-size: calc(0.8vw + 1.6vh); padding-top:0.1em; font-family: 'Open Sans'; font-weight:100">Integrated Engineering</h3>
+        <h6 class="text-center" style= "font-size: calc(0.5vw + 1vh); padding-top:0.1em; font-family: 'Open Sans'; font-weight:100">Mechanical + Electrical + Aerospace</h6>
 
+        <!--Icons-->
         <div class="container-fluid text-center">
             <div class="btn-group" role="group">
                 <button type="button" class="btn btn-circle" style= "background:transparent">
                     <a href="https://www.linkedin.com/in/victor-leung-ca">
-                        <img src="Images/linkedin.svg" class="hoverbutton" alt="LinkedIn" height="32" title="LinkedIn"/>
+                        <img src="Images/linkedin.svg" class="hoverbutton" style= "height: 3.5vh; width: 3.5vw" alt="LinkedIn" height="32" title="LinkedIn"/>
                     </a>
                 </button>
                 <button type="button" class="btn btn-circle" style= "background:transparent">
                     <a href="https://github.com/Victor-Leung-CA">
-                        <img src="Images/github.svg" class="hoverbutton" focusable="false" alt="Github" height="32" title="Github"/>
+                        <img src="Images/github.svg" class="hoverbutton" style= "height: 3.5vh; width: 3.5vw" alt="Github" height="32" title="Github"/>
                     </a>
                 </button>
                 <button type="button" class="btn btn-circle" style= "background:transparent">
                     <a href="https://www.youtube.com/channel/UCVhWuphkSFWgtLWjb0hbA6w">
-                        <img src="Images/youtube.svg" class="hoverbutton" focusable="false" alt="Youtube" height="32" title="Youtube"/>
+                        <img src="Images/youtube.svg" class="hoverbutton" style= "height: 3.5vh; width: 3.5vw" alt="Youtube" height="32" title="Youtube"/>
                     </a>
                 </button>
             </div>
@@ -55,27 +57,97 @@
 
     </div>
 
-<body>
+    <!-- Scroll Animated Plane -->
     <div class="planecontainer">
         <image class="plane" src="Images/plane.gif" style="max-width: 25%; padding-top: 10px"></image>
     </div>
-    <div class="container1">
-        <h2 class="text-center" style= "padding-top:0.1em; font-family: 'Open Sans'; font-weight:600; color: rgb(25, 47, 145)">Hello World!</h2>
-        <h6 class="text-center" style= "padding-top:1em; font-family: 'Open Sans'; font-weight:300">I'm a 3rd year <strong>Integrated Engineer</strong> from the University of British Columbia</h6>
-        <h6 class="text-center" style= "padding-top:0.1em; font-family: 'Open Sans'; font-weight:300;">passionate in the development of electromechanical devices</h6>
-        <h6 class="text-center" style= "padding-top:0.1em; font-family: 'Open Sans'; font-weight:300;">to create a positive impact on society.</h6>
-        <h6 class="text-center" style= "padding-top:1em; font-family: 'Open Sans'; font-weight:300">Looking to apply my skills in <strong>mechanical prototyping</strong>,</h6>
-        <h6 class="text-center" style= "padding-top:0.1em; font-family: 'Open Sans'; font-weight:300;"><strong>electrical design </strong> and <strong>embedded software</strong></h6>
-        <h6 class="text-center" style= "padding-top:0.1em; font-family: 'Open Sans'; font-weight:300;">to an internship position starting in May.</h6>
-        <div class="container-fluid text-center" style= "padding-top: 2em; padding-bottom: 2em; filter:opacity(50%)">
-            <img src="Images/git-commit.svg">
+    
+    <div id="about" class="container1">
+        <!--Introduction-->
+        <div class="row align-items-center widthconfine fadein">
+            <div class="col">
+                <h3 class="text-center" style= "padding-top:1em; padding-left:1em; font-family: 'Open Sans'; font-weight:300; color: rgb(65, 75, 133)">Hello World!</h3>
+            </div>
         </div>
-        <h2 class="text-center" style= "padding-top:0.1em; font-family: 'Open Sans'; font-weight:600; color: rgb(25, 47, 145)">Skills</h2>
-        <h5 class="text-center" style= "padding-top:0.1em; font-family: 'Open Sans'; font-weight:300;">blsdljsd ajdhjhdjsdhjsd sdhjhsd hjsd </h5>
-        <h5 class="text-center" style= "padding-top:0.1em; font-family: 'Open Sans'; font-weight:300;">blsdljsd ajdhjhdjsdhjsd sdhjhsd hjsd </h5>
-        <h5 class="text-center" style= "padding-top:0.1em; font-family: 'Open Sans'; font-weight:300;">blsdljsd ajdhjhdjsdhjsd sdhjhsd hjsd </h5>
-        <h5 class="text-center" style= "padding-top:0.1em; font-family: 'Open Sans'; font-weight:300;">blsdljsd ajdhjhdjsdhjsd sdhjhsd hjsd </h5>
+
+        <div class="row align-items-center widthconfine fadein">
+            <div class="container" style="max-width: 500px;">
+                <h6 class="text-center" style= "font-family: 'Open Sans'; font-weight:300; padding-left: 1em; line-height: 1.7em;">
+                    I'm a 3<sup>rd</sup> year <strong>Integrated Engineer</strong> from the University of British Columbia 
+                    passionate in the development of electromechanical devices to create a positive impact on society.
+                </h6>
+            </div>
+        </div>
+        
+        <div class="row align-items-center widthconfine fadein" style="padding-top:1em">
+            <div class="container" style="max-width: 500px;">
+                <h6 class="text-center" style= "font-family: 'Open Sans'; font-weight:300; padding-left: 1em; line-height: 1.7em;">
+                    Looking to apply my skills in <strong>mechanical prototyping</strong>,
+                    <strong>electrical design </strong> and <strong>embedded software</strong>
+                    to an internship position starting in May.
+                </h6>
+            </div>
+        </div>
+
+        <!--Resume-->
+
+        <div id="resume" class="container-fluid text-center fadein justify-content-center" style= "padding-top: 2em; padding-bottom: 2em;">
+            <img class="center" src="Images/Personal Portrait.png" style="width:13vw; height: auto; min-width: 200px;">
+        </div>
+
+        <div class="row align-items-center widthconfine fadein">
+            <div class="container">
+                <h3 class="text-center" style= "padding-top:0.1em; padding-left:1.2em; font-family: 'Open Sans'; font-weight:300; color: rgb(65, 75, 133)">Resume</h3>
+            </div>
+        </div>
+
+
+        <!-- Timeline -->
+        <div class="container-fluid" style="max-width: 800px;">
+            <div class="timeline">
+                <div class="timeline-item right fadein rounded-lg p-4 ">
+                    <span class="small text-gray timeline-date"><i class="fa fa-clock-o mr-1"></i>August 2019 - September 2019</span>
+                    <h2 class="h5 mt-3" style= "font-family: 'Open Sans'; font-weight: 500; "> UBC Orientation Leader </h2>
+                    <p class="text-small mt-2 font-weight-light">
+                        Led a group of 30 Engineering undergraduates to complete their orientation at UBC. 
+                        Organised teaching materials with professors and hosted events fascilitating more than 200 students.
+                    </p>
+                </div>
+                <div class="timeline-item left fadein rounded-lg p-4 ">
+                    <span class="small text-gray timeline-date"><i class="fa fa-clock-o mr-1"></i>September 2018 - Present</span>
+                    <h2 class="h5 mt-3" style= "font-family: 'Open Sans'; font-weight: 500; "> UBC AeroDesign Airfoils Co-Lead </h2>
+                    <p class="text-small mt-2 font-weight-light">
+                        Analyzed aerodynamic and structural requirements and designed Solidworks CAD drawings for construction.
+                        Operated a laser-cutter to manufacture plane components and manage a group of 7 members.
+                    </p>
+                </div>
+                <div class="timeline-item right fadein rounded-lg p-4 ">
+                    <span class="small text-gray timeline-date"><i class="fa fa-clock-o mr-1"></i>September 2018 - September 2019</span>
+                    <h2 class="h5 mt-3" style= "font-family: 'Open Sans'; font-weight: 500; "> UBC Engineering Undergraduate Society</h2>
+                    <p class="text-small mt-2 font-weight-light">
+                        Created video content and took photos of events. Maintained the Engineering Carin.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Projects-->
+        <div class="container-fluid text-center fadein justify-content-center" style= "padding-top: 2em; padding-bottom: 2em; filter:opacity(60%)">
+            <img class="center" src="Images/Project icon.png" style="width:13vw; height: auto; min-width: 200px;">
+        </div>
+
+        <div class="row align-items-center widthconfine fadein">
+            <div class="container">
+                <h3 class="text-center" style= "padding-top:0.1em; padding-left:1.2em; font-family: 'Open Sans'; font-weight:300; color: rgb(25, 47, 145)">Projects</h3>
+            </div>
+        </div>
+
     </div>
+
+    
+
+
     <script src="background-animation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
