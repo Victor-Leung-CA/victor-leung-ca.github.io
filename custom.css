@@ -155,7 +155,7 @@ body {
         max-width: 70vw;
         margin: 0 auto; /* Added */
         margin-top: 20px !important;
-        min-width: 70vw;
+        min-width: 80vw;
     }
 
     .card-deck .card:hover{
