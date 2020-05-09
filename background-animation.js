@@ -27,6 +27,8 @@ $(document).ready(function(){
       });
 
 
+
+
      $button.hover(function(){
           $(this).css('transform', 'scale(1.5,1.5)');
           $(this).css({"transition":"0.5s"})
@@ -38,10 +40,9 @@ $(document).ready(function(){
           $(this).css('filter', 'opacity(50%)');
      });
 
-});
 
-/* Check the location of each element */
-$('.fadein').each( function(i){
+     /* Check the location of each element */
+     $('.fadein').each( function(i){
   
      var bottom_of_object= $(this).offset().top + $(this).outerHeight();
      var bottom_of_window = $(window).height();
@@ -66,9 +67,10 @@ $('.fadein').each( function(i){
        });
    });
 
-   $('#myScrollspy').on('activate.bs.scrollspy', function () {
-     $(this).animate
-   })
+
+
+});
+
 
    $(document).ready(function(){
 
@@ -94,3 +96,4 @@ $('.fadein').each( function(i){
        }  // End if
      });
    });
+
