@@ -273,3 +273,57 @@ body.modal-open {
         border-top-right-radius: 7px;
     }
 }
+
+#Prop-Left, #Prop-Right{
+    animation: prop 0.6s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.drone:hover .drone-body{
+    transform: translateY(-100px);
+    transition: 1s ease;
+}
+
+.drone:hover #Prop-Left, .drone:hover #Prop-Right{
+    animation: prop 0.3s infinite linear;
+}
+.drone-body{
+    transition: 1s ease;
+}
+
+@keyframes prop {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+#Name path{
+    animation: name 3s ease-in-out;
+    stroke-dasharray: 100%;
+}
+
+#Name {
+    animation: name-fill 1s ease-out forwards 2s;
+}
+
+@keyframes name {
+    from {
+        stroke-dashoffset: 100%;
+    }
+    to {
+        stroke-dashoffset: 0%;
+    }
+}
+
+@keyframes name-fill{
+    from {
+        fill: transparent
+    }
+    to {
+        fill: black;
+    }
+}
