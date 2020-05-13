@@ -182,9 +182,7 @@ body {
     transition: 0.5s;
 }
 
-.imagehover{
-    transition: 0.5s;
-}
+
 
 .card{
     float: none; /* Added */
@@ -220,7 +218,6 @@ body.modal-open {
 
 /*IMPORTANT: Keeps pages from scrolling when modal opens*/
 body.modal-open {
-
     position: inherit;
 }
 

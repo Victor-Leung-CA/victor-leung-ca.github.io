@@ -20,9 +20,9 @@ $(document).ready(function(){
          lastScrollTop = st;
       
          if (percent > maxdisplacement){
-              $plane.fadeOut();
+              $plane.fadeOut(200);
          } else {
-              $plane.fadeIn();
+              $plane.fadeIn(200);
          }
       });
 
@@ -41,8 +41,8 @@ $(document).ready(function(){
      });
 
 
-     /* Check the location of each element */
-     $('.fadein').each( function(i){
+  /* Check the location of each element */
+  $('.fadein').each( function(i){
   
      var bottom_of_object= $(this).offset().top + $(this).outerHeight();
      var bottom_of_window = $(window).height();
@@ -60,9 +60,10 @@ $(document).ready(function(){
            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
            var bottom_of_window = $(window).scrollTop() + $(window).height();
          
-           /* If the object is completely visible in the window, fadeIn it */
+           /* If the object is completely visible in the window, fade in */
            if( bottom_of_window > bottom_of_object ){
-             $(this).animate({'opacity':'1'},700);
+            $(this).css({'opacity': '100%'});
+            $(this).css({'transition':'1s'});
            }
        });
    });
@@ -70,6 +71,72 @@ $(document).ready(function(){
 
 
 });
+
+  /* Check the location of each element */
+  $('.swiperight').each( function(i){
+  
+    var bottom_of_object= $(this).offset().top + $(this).outerHeight();
+    var bottom_of_window = $(window).height();
+    
+    if( bottom_of_object > bottom_of_window){
+      $(this).addClass('lefthidden');
+    }
+  });
+  
+  
+  $(window).scroll( function(){
+      /* Check the location of each element hidden */
+      $('.lefthidden').each( function(i){
+        
+          var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+          var bottom_of_window = $(window).scrollTop() + $(window).height();
+          $(this).css({'left':'-6vw'});
+          $(this).css({'opacity': '0%'});
+        
+          /* If the object is completely visible in the window, swipe right */
+          if( bottom_of_window > bottom_of_object ){
+            $(this).css({'left':'0%'});
+            $(this).css({'opacity': '100%'});
+            $(this).css({'transition':'1s'});
+            $(this).removeClass('lefthidden')
+          }
+      });
+  });
+
+
+    /* Check the location of each element */
+    $('.swipeleft').each( function(i){
+  
+      var bottom_of_object= $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).height();
+      
+      if( bottom_of_object > bottom_of_window){
+        $(this).addClass('righthidden');
+      }
+    });
+    
+    
+    $(window).scroll( function(){
+        /* Check the location of each element hidden */
+        $('.righthidden').each( function(i){
+          
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            $(this).css({'left':'6vw'});
+            $(this).css({'opacity': '0%'});
+          
+            /* If the object is completely visible in the window, swipe right */
+            if( bottom_of_window > bottom_of_object ){
+              $(this).css({'left':'0%'});
+              $(this).css({'opacity': '100%'});
+              $(this).css({'transition':'1s'});
+              $(this).removeClass('righthidden')
+            }
+        });
+    });
+
+
+
 
 
    $(document).ready(function(){
