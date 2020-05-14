@@ -4,6 +4,13 @@ body {
     background-color: #628ba7;
 }
 
+/*FOR IOS SAFARI COMPATIBILITY*/
+.hidden, .lefthidden, .righthidden{
+    visibility: visible;
+}
+
+/*END*/
+
 .home-background {
     background-image: url(Images/back2.png), url(Images/mountain-background.png);
     background-position: center; 
@@ -223,7 +230,7 @@ body.modal-open {
 }
 
 .modal-container{
-    background-color: #ffffff;
+    background-color: rgba(200, 225, 245, 0.644);
     border-radius: 5px;
 }
 
@@ -234,16 +241,44 @@ body.modal-open {
 }
 
 .skills{
-    border:0; 
-    background-color: #145079; 
-    color: white;
+    background-color: rgb(234, 248, 255); 
+    color: rgb(0, 0, 0);
     border-radius: 3px; 
+    border: 1px solid rgba(212, 211, 211, 0.137);
     padding: 5px; 
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    box-shadow: -1.5px -1.5px 4px 0 rgba(255, 255, 255, 0.726),
+                1.5px 1.5px 4px 0 rgba(77, 76, 76, 0.199);
     font-family: 'Open Sans';
     font-size: 14px;
+    font-weight: 300;
     margin-right: 5px;
     line-height: 2.8em;
+}
+
+.skills:hover{
+    background-color: rgb(234, 248, 255);; 
+    border: 1px solid rgba(202, 199, 199, 0.726);
+    box-shadow: inset -1px -1px 3px 0 rgba(255, 255, 255, 0.404),
+                inset 1px 1px 3.5px 0 rgba(32, 32, 32, 0.74);
+}
+
+.btn{
+    background-color: rgb(50, 137, 187); 
+    font-family: 'Open Sans';
+    font-size: 15px;
+    font-weight: 300;
+    border: 1px solid rgba(212, 211, 211, 0.644);
+    box-shadow: -3px -3px 2px 0 rgba(255, 255, 255, 0.493),
+                1px 1px 2px 0 rgba(61, 61, 61, 0.432);
+    
+}
+
+.btn:hover{
+    background-color: rgb(50, 137, 187); 
+    border: 1px solid rgba(245, 245, 245, 0.726);
+    box-shadow: inset -1px -1px 5px 0 rgba(255, 255, 255, 0.404),
+                inset 1px 1px 8px 0 rgba(32, 32, 32, 0.877);
+    
 }
 
 .project-list{
@@ -254,6 +289,7 @@ body.modal-open {
 .project-list li{
     font-family: 'Open Sans';
     font-size: 14px;
+    font-weight: 300;
 }
 
 .project-image{
