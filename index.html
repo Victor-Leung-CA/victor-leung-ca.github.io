@@ -9,6 +9,7 @@
     <link href="custom.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="rellax.min.js"></script>
     <link rel="shortcut icon" type="image/png" href="Images/Logo.png">
     <title>Victor Leung</title>
 </head>
@@ -66,21 +67,25 @@
                 </button>
             </div>
         </div>
-
     </div>
 
     <!-- Scroll Animated Plane -->
     <div class="planecontainer">
         <image class="plane" src="Images/plane.gif" style="max-width: 25%; padding-top: 10px"></image>
+        <img class="rellax plane_img" src="Images/plane.png" data-rellax-speed="-3" data-rellax-mobile-speed="2">
+        <img class="rellax plane_img-2" src="Images/plane_2.svg" data-rellax-speed="-6" data-rellax-mobile-speed="4">
     </div>
     
+
     <div class="container1" style="padding-bottom: 10px;">
+
         <!--Introduction-->
         <div id="about" class="row align-items-center widthconfine fadein">
             <div class="col">
                 <h3 class="text-center" style= "padding-top:1em; padding-left:1em; font-family: 'Open Sans'; font-weight:500; color: rgb(65, 75, 133)">Hello World!</h3>
             </div>
         </div>
+
 
         <div class="row align-items-center widthconfine fadein">
             <div class="container" style="max-width: 500px;">
@@ -96,7 +101,7 @@
                 <h6 class="text-center" style= "font-family: 'Open Sans'; font-weight:300; padding-left: 1em; line-height: 1.7em;">
                     Looking to apply my skills in <strong>mechanical prototyping</strong>,
                     <strong>electrical design </strong> and <strong>embedded software</strong>
-                    to an internship position starting in May.
+                    to an internship position starting in May 2021.
                 </h6>
             </div>
         </div>
@@ -104,7 +109,7 @@
         <!--Resume-->
 
         <div id="resume" class="container-fluid text-center fadein justify-content-center" style= "padding-top: 2em; padding-bottom: 2em;">
-            <img class="center imagehover" src="Images/Personal Portrait.png" style="width:13vw; height: auto; min-width: 200px;">
+            <img class="center portrait_img" src="Images/Personal Portrait.png" style="width:13vw; height: auto; min-width: 200px;">
         </div>
 
         <div class="row align-items-center widthconfine fadein">
@@ -117,6 +122,14 @@
         <!-- Timeline -->
         <div class="container-fluid" style="max-width: 800px;">
             <div class="timeline">
+                <div class="timeline-item left fadein rounded-lg p-4 ">
+                    <span class="small text-gray timeline-date"><i class="fa fa-clock-o ml-1"></i>June 2020 - August 2020</span>
+                    <h3 class="h6 mt-3" style= "font-family: 'Open Sans'; font-weight: 300; "> Techsol Engineering Inc.</h2>
+                    <h2 class="h5" style= "font-family: 'Open Sans'; font-weight: 500; "> Software Engineer Co-op</h2>
+                    <p class="text-small mt-2 font-weight-light">
+                        Designed websites for rebranding and launch of Indiegogo campaign.
+                    </p>
+                </div>
                 <div class="timeline-item right fadein rounded-lg p-4 ">
                     <span class="small text-gray timeline-date"><i class="fa fa-clock-o ml-1"></i>August 2019 - September 2019</span>
                     <h2 class="h5 mt-3" style= "font-family: 'Open Sans'; font-weight: 500; "> UBC Orientation Leader </h2>
@@ -145,8 +158,8 @@
 
 
         <!--Projects-->
-        <div id="projects" class="container-fluid text-center fadein justify-content-center" style= "padding-top: 0em;">
-            <svg class="drone" width="400" height="300" viewBox="0 0 888 553" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div id="projects" class="container-fluid text-center fadein justify-content-center" style= "padding-top: 1rem;">
+            <svg class="drone" viewBox="0 0 888 553" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="undraw_drone_surveillance_kjjg 1">
                 <ellipse id="Ellipse 1" cx="443.5" cy="431.5" rx="335.5" ry="120.5" fill="#ACC5CD"/>
                 <g class="drone-body">
@@ -192,7 +205,7 @@
 
         <div class="row align-items-center widthconfine fadein">
             <div class="container">
-                <h3 class="text-center" style= "padding-top:0.1em; padding-bottom: 1em; padding-left:1.2em; font-family: 'Open Sans'; font-weight:500; color: rgb(65, 75, 133)">Projects</h3>
+                <h3 class="text-center" style= "padding-top:1rem; padding-bottom: 1em; padding-left:1.2em; font-family: 'Open Sans'; font-weight:500; color: rgb(65, 75, 133)">Projects</h3>
             </div>
         </div>
 
@@ -290,10 +303,10 @@
                                     </div>
                                     <div class= "col-6 projectcol" style= "padding-top: 2%; padding-left: 0">
                                         <h4 style="font-family: 'Open Sans'; font-weight: 300; text-align: center;">UBC AeroDesign</h4>
-                                        <span style="margin-left: 1rem;" class="skills">Solidworks</span>
-                                        <span class="skills">Wind Tunnel</span>
-                                        <span class="skills">Excel</span>
-                                        <span class="skills">XFLR5</span>
+                                        <span class="skills">Solidworks</span>
+                                        <div class="skills">Wind Tunnel</div>
+                                        <div class="skills">Excel</div>
+                                        <div class="skills">XFLR5</div>
                                         <ul class= "project-list">
                                             <li>Computed torsional loads and wing moments imposed on wing.</li>
                                             <li>Used Solidworks to design horizontal stabilizer and servo arm attachment.</li>
@@ -340,7 +353,7 @@
                                     </div>
                                     <div class= "col-6 projectcol" style= "padding-top: 2%; padding-left: 0">
                                         <h4 style="font-family: 'Open Sans'; font-weight: 300; text-align: center;">Chocolate Tempering Machine</h4>
-                                        <span style="margin-left: 1rem;" class="skills">Solidworks</span>
+                                        <span class="skills">Solidworks</span>
                                         <span class="skills">Multisim</span>
                                         <span class="skills">C++</span>
                                         <span class="skills">Arduino</span>
@@ -387,10 +400,13 @@
                                     </div>
                                     <div class= "col-6 projectcol" style= "padding-top: 2%; padding-left: 0">
                                         <h4 style="font-family: 'Open Sans'; font-weight: 300; text-align: center;">Line Following Robot</h4>
-                                        <span style="margin-left: 1rem;" class="skills">Solidworks</span>
-                                        <span class="skills">C++</span>
-                                        <span class="skills">Arduino</span>
-                                        <span class="skills">3D Printing</span>
+                                        <div class="skills_container">
+                                            <div class="skills">Solidworks</div>
+                                            <div class="skills">C++</div>
+                                            <div class="skills">3D Printing</div>
+                                            <div class="skills">Arduino</div>
+                                        </div>
+                                        
                                         <ul class= "project-list">
                                             <li>Designed an algorithm for an Arduino to complete various obstacle courses.</li>
                                             <li>Designed and 3D printed a chassis to hold 5 IR sensors for the robot using Solidworks.</li>
@@ -440,7 +456,7 @@
                                     </div>
                                     <div class= "col-6 projectcol" style= "padding-top: 2%; padding-left: 0">
                                         <h4 style="font-family: 'Open Sans'; font-weight: 300; text-align: center;">FPV Drone</h4>
-                                        <span style="margin-left: 1rem;" class="skills">Omnibus Flight Controller</span>
+                                        <span class="skills">Omnibus Flight Controller</span>
                                         <span class="skills">Soldering</span>
                                         <span class="skills">PID</span>
                                         <ul class= "project-list">

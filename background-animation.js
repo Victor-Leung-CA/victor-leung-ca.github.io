@@ -2,6 +2,8 @@ var $win = $(window);
 var $plane = $('.plane');
 var lastScrollTop = 0;
 var $button = $('.hoverbutton');
+//relax 
+var rellax = new Rellax('.rellax');
 
 
 $(document).ready(function(){
