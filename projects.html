@@ -1,48 +1,493 @@
 <!doctype html>
 <html lang="en">
-
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link href="custom.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="rellax.min.js"></script>
+  <link rel="shortcut icon" type="image/png" href="Images/Logo.png">
   <title>Victor Leung</title>
 </head>
 
-<nav class="navbar navbar-expand-md navbar-light" style="background: rgba(0,0,0,0)">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-  </button>
+<body data-spy="scroll" data-target=".navbar" data-offset="40">
+  <div class="home-background">
+      <nav id="navbar" class="navbar navbar-expand-md navbar-light" style="background: rgba(0,0,0,0);">
+          <button class="navbar-toggler" style="border:none" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
 
-  <div class="collapse navbar-collapse justify-content-center" id="navbarMenu">
-      <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="index.html" style= "padding-right: 7em; font-size: larger; font-family: 'Open Sans'; font-weight:300">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="projects.html" style= "padding-right: 7em; font-size: larger; font-family: 'Open Sans', sans-serif; font-weight:300;">Projects</a>
-          <a class="nav-item nav-link" href="#" style= "padding-right: 7em; font-size: larger; font-family: 'Open Sans', sans-serif; font-weight: 300;">Resume</a>
-          <a class="nav-item nav-link" href="#" style= "font-size: larger; font-family: 'Open Sans', sans-serif; font-weight: 300;">Photography</a>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarMenu">
+              <div class="navbar-nav navbar-default";>
+                  <a class="nav-item nav-link active nav-left" href="#about" style= "padding-right: 7em; padding-left: 7em; font-size: larger; font-family: 'Open Sans'; font-weight:300;">About</a>
+                  <a class="nav-item nav-link active" href="#resume" style= "padding-right: 7em; font-size: larger; font-family: 'Open Sans', sans-serif; font-weight:300;">Resume</a>
+                  <a class="nav-item nav-link active" href="#projects" style= "padding-right: 7em; font-size: larger; font-family: 'Open Sans', sans-serif; font-weight: 300;">Projects</a>
+              </div>
+          </div>
+      </nav>
+      <svg id="Name" width="25vw" style="display: block; margin: auto; min-width: 300px; padding-top: 3vh" viewBox="0 0 445 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.9375 36.7188L33.25 2.5H43.6875L27.8438 48H18.0625L2.28125 2.5H12.6875L22.9375 36.7188Z" stroke="black" stroke-width="2"/>
+          <path d="M57.9688 48H48.5938V2.5H57.9688V48Z" stroke="black" stroke-width="2"/>
+          <path d="M102.406 32.8438C102.052 37.7396 100.24 41.5938 96.9688 44.4062C93.7188 47.2188 89.4271 48.625 84.0938 48.625C78.2604 48.625 73.6667 46.6667 70.3125 42.75C66.9792 38.8125 65.3125 33.4167 65.3125 26.5625V23.7812C65.3125 19.4062 66.0833 15.5521 67.625 12.2188C69.1667 8.88542 71.3646 6.33333 74.2188 4.5625C77.0938 2.77083 80.4271 1.875 84.2188 1.875C89.4688 1.875 93.6979 3.28125 96.9062 6.09375C100.115 8.90625 101.969 12.8542 102.469 17.9375H93.0938C92.8646 15 92.0417 12.875 90.625 11.5625C89.2292 10.2292 87.0938 9.5625 84.2188 9.5625C81.0938 9.5625 78.75 10.6875 77.1875 12.9375C75.6458 15.1667 74.8542 18.6354 74.8125 23.3438V26.7812C74.8125 31.6979 75.5521 35.2917 77.0312 37.5625C78.5312 39.8333 80.8854 40.9688 84.0938 40.9688C86.9896 40.9688 89.1458 40.3125 90.5625 39C92 37.6667 92.8229 35.6146 93.0312 32.8438H102.406Z" stroke="black" stroke-width="2"/>
+          <path d="M141.875 10.0938H127.938V48H118.562V10.0938H104.812V2.5H141.875V10.0938Z" stroke="black" stroke-width="2"/>
+          <path d="M183.75 26.2812C183.75 30.7604 182.958 34.6875 181.375 38.0625C179.792 41.4375 177.521 44.0417 174.562 45.875C171.625 47.7083 168.25 48.625 164.438 48.625C160.667 48.625 157.302 47.7188 154.344 45.9062C151.385 44.0938 149.094 41.5104 147.469 38.1562C145.844 34.7812 145.021 30.9062 145 26.5312V24.2812C145 19.8021 145.802 15.8646 147.406 12.4688C149.031 9.05208 151.312 6.4375 154.25 4.625C157.208 2.79167 160.583 1.875 164.375 1.875C168.167 1.875 171.531 2.79167 174.469 4.625C177.427 6.4375 179.708 9.05208 181.312 12.4688C182.938 15.8646 183.75 19.7917 183.75 24.25V26.2812ZM174.25 24.2188C174.25 19.4479 173.396 15.8229 171.688 13.3438C169.979 10.8646 167.542 9.625 164.375 9.625C161.229 9.625 158.802 10.8542 157.094 13.3125C155.385 15.75 154.521 19.3333 154.5 24.0625V26.2812C154.5 30.9271 155.354 34.5312 157.062 37.0938C158.771 39.6562 161.229 40.9375 164.438 40.9375C167.583 40.9375 170 39.7083 171.688 37.25C173.375 34.7708 174.229 31.1667 174.25 26.4375V24.2188Z" stroke="black" stroke-width="2"/>
+          <path d="M207.406 31.3438H199.938V48H190.562V2.5H207.469C212.844 2.5 216.99 3.69792 219.906 6.09375C222.823 8.48958 224.281 11.875 224.281 16.25C224.281 19.3542 223.604 21.9479 222.25 24.0312C220.917 26.0938 218.885 27.7396 216.156 28.9688L226 47.5625V48H215.938L207.406 31.3438ZM199.938 23.75H207.5C209.854 23.75 211.677 23.1562 212.969 21.9688C214.26 20.7604 214.906 19.1042 214.906 17C214.906 14.8542 214.292 13.1667 213.062 11.9375C211.854 10.7083 209.99 10.0938 207.469 10.0938H199.938V23.75Z" stroke="black" stroke-width="2"/>
+          <path d="M256.75 40.4688H276.656V48H247.375V2.5H256.75V40.4688Z" stroke="black" stroke-width="2"/>
+          <path d="M309.438 28.2812H291.438V40.4688H312.562V48H282.062V2.5H312.5V10.0938H291.438V20.9375H309.438V28.2812Z" stroke="black" stroke-width="2"/>
+          <path d="M352.5 2.5V32.4688C352.5 37.4479 350.938 41.3854 347.812 44.2812C344.708 47.1771 340.458 48.625 335.062 48.625C329.75 48.625 325.531 47.2188 322.406 44.4062C319.281 41.5938 317.688 37.7292 317.625 32.8125V2.5H327V32.5312C327 35.5104 327.708 37.6875 329.125 39.0625C330.562 40.4167 332.542 41.0938 335.062 41.0938C340.333 41.0938 343.01 38.3229 343.094 32.7812V2.5H352.5Z" stroke="black" stroke-width="2"/>
+          <path d="M397.188 48H387.812L369.562 18.0625V48H360.188V2.5H369.562L387.844 32.5V2.5H397.188V48Z" stroke="black" stroke-width="2"/>
+          <path d="M441.375 42.25C439.688 44.2708 437.302 45.8438 434.219 46.9688C431.135 48.0729 427.719 48.625 423.969 48.625C420.031 48.625 416.573 47.7708 413.594 46.0625C410.635 44.3333 408.344 41.8333 406.719 38.5625C405.115 35.2917 404.292 31.4479 404.25 27.0312V23.9375C404.25 19.3958 405.01 15.4688 406.531 12.1562C408.073 8.82292 410.281 6.28125 413.156 4.53125C416.052 2.76042 419.438 1.875 423.312 1.875C428.708 1.875 432.927 3.16667 435.969 5.75C439.01 8.3125 440.812 12.0521 441.375 16.9688H432.25C431.833 14.3646 430.906 12.4583 429.469 11.25C428.052 10.0417 426.094 9.4375 423.594 9.4375C420.406 9.4375 417.979 10.6354 416.312 13.0312C414.646 15.4271 413.802 18.9896 413.781 23.7188V26.625C413.781 31.3958 414.688 35 416.5 37.4375C418.312 39.875 420.969 41.0938 424.469 41.0938C427.99 41.0938 430.5 40.3438 432 38.8438V31H423.469V24.0938H441.375V42.25Z" stroke="black" stroke-width="2"/>
+      </svg>
+              
+          
+      <h3 class="text-center" style= "font-size: calc(16px + 0.6vw); padding-top:0.6em; font-family: 'Open Sans'; font-weight:100; min-width: 250px;">Integrated Engineering</h3>
+      <h6 class="text-center" style= "font-size: calc(12px + 0.4vw); padding-top:0.1em; font-family: 'Open Sans'; font-weight:100">Mechanical + Electrical + Aerospace</h6>
+
+      <!--Icons-->
+      <div class="container-fluid text-center">
+          <div class="btn-group" role="group">
+              <button type="button" style= "background:transparent; border: transparent">
+                  <a href="https://www.linkedin.com/in/victor-leung-ca">
+                      <img src="Images/linkedin.svg" class="hoverbutton" style= "width: calc(20px + 1vw); height: auto" alt="LinkedIn" height="32" title="LinkedIn"/>
+                  </a>
+              </button>
+              <button type="button" style= "background:transparent; border: transparent">
+                  <a href="https://github.com/Victor-Leung-CA">
+                      <img src="Images/github.svg" class="hoverbutton" style= "width: calc(20px + 1vw); height: auto" alt="Github" height="32" title="Github"/>
+                  </a>
+              </button>
+              <button type="button" style= "background:transparent; border: transparent">
+                  <a href="https://www.youtube.com/channel/UCVhWuphkSFWgtLWjb0hbA6w">
+                      <img src="Images/youtube.svg" class="hoverbutton" style= "width: calc(20px + 1vw); height: auto" alt="Youtube" height="32" title="Youtube"/>
+                  </a>
+              </button>
+          </div>
       </div>
   </div>
-</nav>
 
-<body>
-  <div class="container-fluid text-center fullpagecontainer">
-    <h2 style= "padding-top:0.1em; font-family: 'Open Sans'; font-weight:100">PROJECTS</h2>
-    <h6 style= "padding-top:0.1em; font-family: 'Open Sans'; font-weight:100">My projects include work from a UBC design team, Capstone projects and personal projects.</h6>
+  <!-- Scroll Animated Plane -->
+  <div class="planecontainer">
+      <image class="plane" src="Images/plane.gif" style="max-width: 25%; padding-top: 10px"></image>
+      <img class="rellax plane_img" src="Images/plane.png" data-rellax-speed="-3" data-rellax-mobile-speed="2">
+      <img class="rellax plane_img-2" src="Images/plane_2.svg" data-rellax-speed="-6" data-rellax-mobile-speed="4">
+  </div>
+  
+
+  <div class="container1" style="padding-bottom: 10px;">
+
+      <!--Introduction-->
+      <div id="about" class="row align-items-center widthconfine fadein">
+          <div class="col">
+              <h3 class="text-center" style= "padding-top:1em; padding-left:1em; font-family: 'Open Sans'; font-weight:500; color: rgb(65, 75, 133)">Hello World!</h3>
+          </div>
+      </div>
+
+
+      <div class="row align-items-center widthconfine fadein">
+          <div class="container" style="max-width: 500px;">
+              <h6 class="text-center" style= "font-family: 'Open Sans'; font-weight:300; padding-left: 1em; line-height: 1.7em;">
+                  I'm a 3<sup>rd</sup> year <strong>Integrated Engineer</strong> from the University of British Columbia 
+                  passionate in the development of electromechanical devices to create a positive impact on society.
+              </h6>
+          </div>
+      </div>
+      
+      <div class="row align-items-center widthconfine fadein" style="padding-top:1em">
+          <div class="container" style="max-width: 500px;">
+              <h6 class="text-center" style= "font-family: 'Open Sans'; font-weight:300; padding-left: 1em; line-height: 1.7em;">
+                  Looking to apply my skills in <strong>mechanical prototyping</strong>,
+                  <strong>electrical design </strong> and <strong>embedded software</strong>
+                  to an internship position starting in May 2021.
+              </h6>
+          </div>
+      </div>
+
+      <!--Resume-->
+
+      <div id="resume" class="container-fluid text-center fadein justify-content-center" style= "padding-top: 2em; padding-bottom: 2em;">
+          <img class="center portrait_img" src="Images/Personal Portrait.png" style="width:13vw; height: auto; min-width: 200px;">
+      </div>
+
+      <div class="row align-items-center widthconfine fadein">
+          <div class="container">
+              <h3 class="text-center" style= "padding-top:0.1em; padding-left:1.2em; font-family: 'Open Sans'; font-weight:500; color: rgb(65, 75, 133)">Resume</h3>
+          </div>
+      </div>
+
+
+      <!-- Timeline -->
+      <div class="container-fluid" style="max-width: 800px;">
+          <div class="timeline">
+              <div class="timeline-item left fadein rounded-lg p-4 ">
+                  <span class="small text-gray timeline-date"><i class="fa fa-clock-o ml-1"></i>June 2020 - August 2020</span>
+                  <h3 class="h6 mt-3" style= "font-family: 'Open Sans'; font-weight: 300; "> Techsol Engineering Inc.</h2>
+                  <h2 class="h5" style= "font-family: 'Open Sans'; font-weight: 500; "> Software Engineer Co-op</h2>
+                  <p class="text-small mt-2 font-weight-light">
+                      Designed websites for rebranding and launch of Indiegogo campaign.
+                  </p>
+              </div>
+              <div class="timeline-item right fadein rounded-lg p-4 ">
+                  <span class="small text-gray timeline-date"><i class="fa fa-clock-o ml-1"></i>August 2019 - September 2019</span>
+                  <h2 class="h5 mt-3" style= "font-family: 'Open Sans'; font-weight: 500; "> UBC Orientation Leader </h2>
+                  <p class="text-small mt-2 font-weight-light">
+                      Led a group of 30 Engineering undergraduates to complete their orientation at UBC. 
+                      Organised teaching materials with professors and hosted events fascilitating more than 200 students.
+                  </p>
+              </div>
+              <div class="timeline-item left fadein rounded-lg p-4 ">
+                  <span class="small text-gray timeline-date"><i class="fa fa-clock-o mr-1"></i>September 2018 - Present</span>
+                  <h2 class="h5 mt-3" style= "font-family: 'Open Sans'; font-weight: 500; "> UBC AeroDesign Airfoils Co-Lead </h2>
+                  <p class="text-small mt-2 font-weight-light">
+                      Analyzed aerodynamic and structural requirements and designed Solidworks CAD drawings for construction.
+                      Operated a laser-cutter to manufacture plane components and manage a group of 7 members.
+                  </p>
+              </div>
+              <div class="timeline-item right fadein rounded-lg p-4 ">
+                  <span class="small text-gray timeline-date"><i class="fa fa-clock-o mr-1"></i>September 2018 - September 2019</span>
+                  <h2 class="h5 mt-3" style= "font-family: 'Open Sans'; font-weight: 500; "> UBC Engineering Undergraduate Society</h2>
+                  <p class="text-small mt-2 font-weight-light">
+                      Created video content and took photos of events. Maintained the Engineering Cairn.
+                  </p>
+              </div>
+          </div>
+      </div>
+
+
+      <!--Projects-->
+      <div id="projects" class="container-fluid text-center fadein justify-content-center" style= "padding-top: 1rem;">
+          <svg class="drone" viewBox="0 0 888 553" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="undraw_drone_surveillance_kjjg 1">
+              <ellipse id="Ellipse 1" cx="443.5" cy="431.5" rx="335.5" ry="120.5" fill="#ACC5CD"/>
+              <g class="drone-body">
+              <g id="Prop-Right">
+              <path id="Vector" d="M662.946 197.647L462.092 182.14L622.332 209.462L660.731 202.816L662.946 197.647Z" fill="#3F3D56"/>
+              <path id="Vector_2" d="M623.809 207.031L662.208 200.385L662.585 199.505L664.423 199.647L662.208 204.816L623.809 211.462L463.569 182.14L511.056 187.806L623.809 207.031Z" fill="#6BC3F4"/>
+              <path id="Vector_3" d="M680.669 197.647L881.523 182.14L721.283 209.462L682.884 202.816L680.669 197.647Z" fill="#3F3D56"/>
+              <path id="Vector_4" d="M722.76 207.031L684.361 200.385L683.984 199.505L682.146 199.647L684.361 204.816L722.76 211.462L883 182.14L835.513 187.806L722.76 207.031Z" fill="#6BC3F4"/>
+              </g>
+              <g id="Prop-Left">
+              <g id="Group 3">
+              <path id="Vector_5" d="M208.07 197.647L7.215 182.14L167.456 209.462L205.855 202.816L208.07 197.647Z" fill="#3F3D56"/>
+              <path id="Vector_6" d="M165.241 207.031L203.639 200.385L204.017 199.505L205.855 199.647L203.639 204.816L165.241 211.462L5 182.14L52.487 187.806L165.241 207.031Z" fill="#6BC3F4"/>
+              </g>
+              <g id="Group 2">
+              <path id="Vector_7" d="M225.792 197.647L426.647 182.14L266.406 209.462L228.008 202.816L225.792 197.647Z" fill="#3F3D56"/>
+              <g id="Group 1">
+              <path id="Vector_8" d="M268.622 207.031L230.223 200.385L229.846 199.505L228.008 199.647L230.223 204.816L268.622 211.462L428.862 182.14L381.375 187.806L268.622 207.031Z" fill="#6BC3F4"/>
+              </g>
+              </g>
+              </g>
+              <g id="Drone-Body">
+              <g id="Group 8">
+              <path id="Vector_9" d="M322.269 320.544C321.245 320.545 320.263 320.953 319.539 321.677C318.815 322.401 318.408 323.383 318.407 324.407V478.722C318.408 479.746 318.815 480.728 319.539 481.452C320.263 482.176 321.245 482.584 322.269 482.585H348.465C349.489 482.584 350.471 482.176 351.195 481.452C351.92 480.728 352.327 479.746 352.328 478.722V324.407C352.327 323.383 351.92 322.401 351.195 321.677C350.471 320.953 349.489 320.545 348.465 320.544H322.269Z" fill="#3F3D56"/>
+              <path id="Vector_10" d="M540.108 320.544C539.084 320.545 538.102 320.953 537.378 321.677C536.654 322.401 536.246 323.383 536.245 324.407V478.722C536.246 479.746 536.654 480.728 537.378 481.452C538.102 482.176 539.084 482.584 540.108 482.585H566.304C567.328 482.584 568.31 482.176 569.034 481.452C569.758 480.728 570.166 479.746 570.167 478.722V324.407C570.166 323.383 569.758 322.401 569.034 321.677C568.31 320.953 567.328 320.545 566.304 320.544H540.108Z" fill="#3F3D56"/>
+              <g id="Group 7">
+              <path id="Vector_11" d="M696.462 278.43L679.478 279.169L523.883 344.815L514.977 352.274L486.747 375.904H398.134L371.447 352.274L361.301 343.287L212.049 279.907L198.757 278.43L243.063 257.016H243.299C253.342 247.482 340.315 240.032 446.133 240.032C551.951 240.032 638.923 247.482 648.966 257.016H649.941L696.462 278.43Z" fill="#3F3D56"/>
+              <path id="Vector_12" d="M241.846 258.11C242.161 257.225 242.323 256.292 242.324 255.353V220.28C242.324 218.076 241.449 215.963 239.891 214.405C238.333 212.846 236.219 211.971 234.016 211.971H230.642C233.412 209.175 235.293 205.623 236.047 201.76C236.802 197.897 236.396 193.898 234.882 190.266C233.367 186.633 230.812 183.53 227.537 181.347C224.262 179.165 220.415 178 216.479 178C212.544 178 208.696 179.165 205.421 181.347C202.147 183.53 199.591 186.633 198.077 190.266C196.562 193.898 196.157 197.897 196.911 201.76C197.666 205.623 199.546 209.175 202.316 211.971H198.943C197.852 211.971 196.771 212.186 195.763 212.603C194.755 213.021 193.839 213.633 193.068 214.405C192.296 215.176 191.684 216.092 191.266 217.1C190.849 218.108 190.634 219.189 190.634 220.28V255.353C190.633 256.789 191.007 258.2 191.719 259.448C189.211 259.887 186.703 260.365 184.195 260.916C182.668 261.258 181.302 262.11 180.325 263.333C179.347 264.556 178.816 266.075 178.819 267.641V275.973C178.819 277.8 179.545 279.552 180.836 280.844C182.128 282.135 183.88 282.861 185.706 282.861H263.739V262.185C256.534 260.37 249.222 259.009 241.846 258.11V258.11Z" fill="#3F3D56"/>
+              <g id="Group 6">
+              <path id="Vector_13" d="M703.639 260.916C701.132 260.365 698.624 259.887 696.116 259.448C696.827 258.2 697.201 256.789 697.201 255.353V220.28C697.201 219.189 696.986 218.108 696.568 217.1C696.151 216.092 695.539 215.176 694.767 214.405C693.996 213.633 693.08 213.021 692.072 212.603C691.064 212.186 689.983 211.971 688.892 211.971H685.518C688.288 209.175 690.169 205.622 690.924 201.76C691.678 197.897 691.273 193.898 689.758 190.266C688.244 186.633 685.688 183.53 682.413 181.347C679.139 179.165 675.291 178 671.356 178C667.42 178 663.573 179.165 660.298 181.347C657.023 183.53 654.467 186.633 652.953 190.266C651.439 193.898 651.033 197.897 651.788 201.76C652.542 205.622 654.423 209.175 657.193 211.971H653.819C652.728 211.971 651.648 212.186 650.64 212.603C649.631 213.021 648.715 213.633 647.944 214.405C647.172 215.176 646.56 216.092 646.143 217.1C645.725 218.108 645.51 219.189 645.51 220.28V255.353C645.512 256.292 645.674 257.225 645.989 258.11C638.613 259.009 631.301 260.37 624.096 262.185V282.861H702.129C703.955 282.861 705.707 282.135 706.999 280.844C708.29 279.552 709.016 277.8 709.016 275.973V267.641C709.019 266.075 708.488 264.556 707.51 263.333C706.532 262.11 705.167 261.258 703.639 260.916V260.916Z" fill="#3F3D56"/>
+              </g>
+              </g>
+              </g>
+              </g>
+              <g id="Group 9">
+              <path id="Vector_14" d="M514.977 352.274L486.747 375.904H398.134L371.447 352.274H397.987L399.146 346.492C399.486 344.791 400.404 343.261 401.745 342.161C403.086 341.061 404.767 340.459 406.501 340.459H480.595C482.33 340.459 484.01 341.061 485.351 342.161C486.692 343.261 487.61 344.791 487.95 346.492L489.11 352.274H514.977Z" fill="#2F5C9F"/>
+              <path id="Vector_15" d="M473.086 346.735H414.011V358.55H473.086V346.735Z" fill="white"/>
+              </g>
+              </g>
+              </g>
+              </svg>
+      </div>
+
+      <div class="row align-items-center widthconfine fadein">
+          <div class="container">
+              <h3 class="text-center" style= "padding-top:1rem; padding-bottom: 1em; padding-left:1.2em; font-family: 'Open Sans'; font-weight:500; color: rgb(65, 75, 133)">Projects</h3>
+          </div>
+      </div>
+
+      <div class="container-fluid" style="max-width: 800px;">
+          <!--AeroDesign Project-->
+          <div class="card-deck">
+              <div class="card swiperight">
+                  <a href="#" style="color:transparent" class="stretched-link" data-toggle="modal" data-target="#AeroModal"></a>
+                  <img class="card-img-top" src="Images/2019 Plane 2.JPG" alt="AeroDesign">
+                  </img>
+                  <div class="card-body">
+                      <span class="small text-gray timeline-date" style="width: max-content;">September 2018 - Present</span>
+                      <h5 class="card-title">UBC AeroDesign</h5>
+                      <p class="card-text">Design, manufacture and testing of remote-controlled planes to compete at the SAE AeroDesign compeition.</p>
+                  </div>
+              </div>
+
+              <!--Chocolate Tempering Machine Project-->
+              <div class="card swipeleft">
+                  <a href="#" style="color:transparent" class="stretched-link" data-toggle="modal" data-target="#ChocoModal"></a>
+                  <img class="card-img-top" src="Images/Chocolate Tempering.png" alt="Chocolate Tempering Machine">
+                  <div class="card-body">
+                      <span class="small text-gray timeline-date" style="width: max-content;">August 2019 - April 2020</span>
+                      <h5 class="card-title">Chocolate Tempering Machine</h5>
+                      <p class="card-text">Capstone Project focused on delivering an affordable and scalable device for chocolatiers and home bakers.</p>
+                  </div>
+              </div>
+          </div>
+          
+          <!--Line Following Robot Project-->
+          <div class="card-deck pt-4">
+              <div class="card swiperight">
+                  <a href="#" style="color:transparent" class="stretched-link" data-toggle="modal" data-target="#LineRobotModal"></a>
+                  <img class="card-img-top" src="Images/Line-following-robot.png" alt="Line Following Robot">
+                  <div class="card-body">
+                      <span class="small text-gray timeline-date" style="width: max-content;">August 2019 - November 2019</span>
+                      <h5 class="card-title">Line Following Robot</h5>
+                      <p class="card-text">Arduino project to complete several obstacle courses for a course compeition.</p>
+                  </div>
+              </div>
+
+              <!--FPV Drone Project-->
+              <div class="card swipeleft">
+                  <a href="#" style="color:transparent;" class="stretched-link" data-toggle="modal" data-target="#DroneModal"></a>
+                  <img class="card-img-top" src="Images/FPV-drone.png" alt="FPV Drone">
+                  <div class="card-body">
+                      <span class="small text-gray timeline-date" style="width: max-content;">May 2019 - August 2019</span>
+                      <h5 class="card-title">FPV Drone</h5>
+                      <p class="card-text">Project to learn more about electrical integration, mechanical assembly, and PID tuning of drones.</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Aero Modal -->
+          <div id="AeroModal" class="modal fade" role="dialog">
+              <div class="modal-dialog modal-dialog-centered modal-lg" style="padding-right: 0;" role="document">
+                  <div class="modal-content">
+                      <div class="container-fluid modal-container">
+                              <div class="row" style="padding-left: 0;">
+                                  <div class= "col-6 projectcol" style="padding-left: 0; padding-right: 0;">
+                                      <div id="aerodesign-images" class="carousel slide carousel-edit" data-ride="carousel" data-interval="false" style="width:100%; height: auto;">
+                                          <ol class="carousel-indicators">
+                                            <li data-target="#aerodesign-images" data-slide-to="0" class="active"></li>
+                                            <li data-target="#aerodesign-images" data-slide-to="1"></li>
+                                            <li data-target="#aerodesign-images" data-slide-to="2"></li>
+                                            <li data-target="#aerodesign-images" data-slide-to="3"></li>
+                                            <li data-target="#aerodesign-images" data-slide-to="4"></li>
+                                          </ol>
+                                          <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                              <img class="d-block rounded-left project-image" src="Images/2019 Plane 2.JPG" alt="2019 Plane">
+                                            </div>
+                                            <div class="carousel-item">
+                                              <img class="d-block rounded-left project-image" src="Images/2018 Plane.png" alt="2018 Plane">
+                                            </div>
+                                            <div class="carousel-item">
+                                              <img class="d-block w-100 rounded-left project-image" src="Images/2019 Plane 4.JPG" alt="2019 Plane">
+                                            </div>
+                                            <div class="carousel-item">
+                                              <img class="d-block w-100 rounded-left project-image" src="Images/Plane Test Flight.jpg" alt="2019 Plane">
+                                            </div>
+                                            <div class="carousel-item">
+                                              <iframe class="d-block w-100 rounded-left project-image" src="https://www.youtube.com/embed/nGT9J_vwyeE" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                          </div>
+                                          <a class="carousel-control-prev" href="#aerodesign-images" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                          </a>
+                                          <a class="carousel-control-next" href="#aerodesign-images" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                          </a>
+                                        </div>
+                                  </div>
+                                  <div class= "col-6 projectcol" style= "padding-top: 2%; padding-left: 0">
+                                      <h4 style="font-family: 'Open Sans'; font-weight: 300; text-align: center;">UBC AeroDesign</h4>
+                                      <span class="skills">Solidworks</span>
+                                      <div class="skills">Wind Tunnel</div>
+                                      <div class="skills">Excel</div>
+                                      <div class="skills">XFLR5</div>
+                                      <ul class= "project-list">
+                                          <li>Computed torsional loads and wing moments imposed on wing.</li>
+                                          <li>Used Solidworks to design horizontal stabilizer and servo arm attachment.</li>
+                                          <li>Redesigned elevator attachment mechanism which reduced wear from frequent reattachments.</li>
+                                          <li>Utilized XFLR5, a fluid simulation software to analyze lift and drag coefficients of wings.</li>
+                                      </ul>
+                                      <button type="button" class="btn float-right mb-2" data-dismiss="modal">Close</button>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+                  </div>
+            </div>
+
+          <!-- Chocolate Modal -->
+          <div id="ChocoModal" class="modal fade" role="dialog">
+              <div class="modal-dialog modal-dialog-centered modal-lg" style="padding-right: 0;" role="document">
+                  <div class="modal-content">
+                      <div class="container-fluid modal-container">
+                              <div class="row" style="padding-left: 0;">
+                                  <div class= "col-6 projectcol" style="padding-left: 0; padding-right: 0;">
+                                      <div id="choco-images" class="carousel slide carousel-edit" data-ride="carousel" data-interval="false" style="width:100%; height: auto;">
+                                          <ol class="carousel-indicators">
+                                            <li data-target="#choco-images" data-slide-to="0" class="active"></li>
+                                            <li data-target="#choco-images" data-slide-to="1"></li>
+                                          </ol>
+                                          <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                              <img class="d-block rounded-left project-image" src="Images/Chocolate Tempering.png" alt="Chocolate Tempering Machine">
+                                            </div>
+                                            <div class="carousel-item">
+                                              <img class="d-block rounded-left project-image" src="Images/Choco-state-machine.png" alt="State Machine">
+                                            </div>
+                                          </div>
+                                          <a class="carousel-control-prev" href="#choco-images" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                          </a>
+                                          <a class="carousel-control-next" href="#choco-images" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                          </a>
+                                        </div>
+                                  </div>
+                                  <div class= "col-6 projectcol" style= "padding-top: 2%; padding-left: 0">
+                                      <h4 style="font-family: 'Open Sans'; font-weight: 300; text-align: center;">Chocolate Tempering Machine</h4>
+                                      <span class="skills">Solidworks</span>
+                                      <span class="skills">Multisim</span>
+                                      <span class="skills">C++</span>
+                                      <span class="skills">Arduino</span>
+                                      <ul class= "project-list">
+                                          <li>Calculated power requirements by testing electrical components with oscilloscope.</li>
+                                          <li>Developed a state machine diagram to allow for quick assembly of code.</li>
+                                          <li>Coded in C++ for an Arduino microcontroller which controls the integration of the hopper system, heating system, 
+                                              and stirring mechanism</li>
+                                          <li>Soldered and wired all electrical components.</li>
+                                      </ul>
+                                      <button type="button" class="btn btn-secondary float-right mb-2" data-dismiss="modal">Close</button>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+                  </div>
+            </div>
+
+            <!-- Line Following Robot -->
+          <div id="LineRobotModal" class="modal fade" role="dialog">
+              <div class="modal-dialog modal-dialog-centered modal-lg" style="padding-right: 0;" role="document">
+                  <div class="modal-content">
+                      <div class="container-fluid modal-container">
+                              <div class="row" style="padding-left: 0;">
+                                  <div class= "col-6 projectcol" style="padding-left: 0; padding-right: 0;">
+                                      <div id="line-robot-images" class="carousel slide carousel-edit" data-ride="carousel" data-interval="false" style="width:100%; height: auto;">
+                                          <ol class="carousel-indicators">
+                                            <li data-target="#line-robot-images" data-slide-to="0" class="active"></li>
+                                          </ol>
+                                          <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                              <img class="d-block rounded-left project-image" src="Images/Line-following-robot.png" alt="Chocolate Tempering Machine">
+                                            </div>
+                                          </div>
+                                          <a class="carousel-control-prev" href="#line-robot-images" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                          </a>
+                                          <a class="carousel-control-next" href="#line-robot-images" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                          </a>
+                                        </div>
+                                  </div>
+                                  <div class= "col-6 projectcol" style= "padding-top: 2%; padding-left: 0">
+                                      <h4 style="font-family: 'Open Sans'; font-weight: 300; text-align: center;">Line Following Robot</h4>
+                                      <div class="skills_container">
+                                          <div class="skills">Solidworks</div>
+                                          <div class="skills">C++</div>
+                                          <div class="skills">3D Printing</div>
+                                          <div class="skills">Arduino</div>
+                                      </div>
+                                      
+                                      <ul class= "project-list">
+                                          <li>Designed an algorithm for an Arduino to complete various obstacle courses.</li>
+                                          <li>Designed and 3D printed a chassis to hold 5 IR sensors for the robot using Solidworks.</li>
+                                          <li>Integrated IR sensors to control the motor outputs.</li>
+                                          <li>Wired output pins from Arduino to H-Bridge.</li>
+                                          <li>Modelled and 3D printed a chassis to contain batteries.</li>
+                                      </ul>
+                                      <button type="button" class="btn btn-secondary float-right mb-2" data-dismiss="modal">Close</button>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+                  </div>
+            </div>
+
+            <!-- FPV Drone -->
+          <div id="DroneModal" class="modal fade" role="dialog">
+              <div class="modal-dialog modal-dialog-centered modal-lg" style="padding-right: 0;" role="document">
+                  <div class="modal-content">
+                      <div class="container-fluid modal-container">
+                              <div class="row" style="padding-left: 0;">
+                                  <div class= "col-6 projectcol" style="padding-left: 0; padding-right: 0;">
+                                      <div id="drone-images" class="carousel slide carousel-edit" data-ride="carousel" data-interval="false" style="width:100%; height: auto;">
+                                          <ol class="carousel-indicators">
+                                            <li data-target="#drone-images" data-slide-to="0" class="active"></li>
+                                            <li data-target="#drone-images" data-slide-to="1"></li>
+                                          </ol>
+                                          <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                              <img class="d-block rounded-left project-image" src="Images/FPV-drone.png" alt="FPV Drone">
+                                            </div>
+                                            <div class="carousel-item">
+                                              <video class="d-block rounded-left project-image" alt="FPV Video" controls>
+                                              <source src="Videos/Drone Video.mov" type="video/mp4">
+                                              </video>
+                                            </div>
+                                          </div>
+                                          <a class="carousel-control-prev" href="#drone-images" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                          </a>
+                                          <a class="carousel-control-next" href="#drone-images" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                          </a>
+                                        </div>
+                                  </div>
+                                  <div class= "col-6 projectcol" style= "padding-top: 2%; padding-left: 0">
+                                      <h4 style="font-family: 'Open Sans'; font-weight: 300; text-align: center;">FPV Drone</h4>
+                                      <span class="skills">Omnibus Flight Controller</span>
+                                      <span class="skills">Soldering</span>
+                                      <span class="skills">PID</span>
+                                      <ul class= "project-list">
+                                          <li>Sourced motors, ESCs and carbon fibre chassis based on the estimated weight and power drawn.</li>
+                                          <li>Tuned PID controls in flight controller, and connected components with SBUS protocol.</li>
+                                          <li>Soldered power distribution board and other electrical components.</li>
+                                          <li>Learning the TensorFlow framework to apply image recognition abilities using Raspberry Pi.</li>
+                                      </ul>
+                                      <button type="button" class="btn btn-secondary float-right mb-2" data-dismiss="modal">Close</button>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+                  </div>
+            </div>
+
+            <div style="margin-bottom: 3em;">
+            </div>
+      </div>
+  <!--Home Background-->
   </div>
 
-    <div class="container-fluid container2 text-center">
-      <image class="plane" src="Images/plane.gif" style="max-width: 25%; padding-top: 100px"></image>
-        <h1 style= "padding-top:0.1em; font-family: 'Open Sans'; font-weight:100">Hello World.</h1>
-        <h3 style= "padding-top:0.1em; font-family: 'Open Sans'; font-weight:100">Hello World.</h3>
-    </div>
+  <div class="container-fluid" style="padding-top:2vh; padding-bottom: 1vh">
+      <h6 style="text-align: center; font-family: 'Open Sans'; font-weight: 300;">Victor Leung Project Portfolio - 2020</h6>
+  </div>
 
-    <script src="background-animation.js"></script>
+  
 
 
-
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="background-animation.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
